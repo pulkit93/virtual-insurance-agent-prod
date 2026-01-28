@@ -49,3 +49,20 @@ Format the responses in Markdown for better readability.
 # Conclusion:
 
 This document provides a high-level overview of the implementation of a virtual insurance agent using LangChain and Together AI. The agent leverages a knowledge base built from insurance exam documents, enabling it to answer insurance-related questions effectively. The use of a RAG chain allows for accurate and context-aware responses, enhancing the user experience. This approach can be further extended to incorporate additional features and functionalities, making the virtual insurance agent a valuable tool for both individuals and insurance companies.
+
+
+Folder Structure
+
+virtual-insurance-agent/
+├── app/
+│   ├── __init__.py
+│   ├── main.py              # FastAPI app entry point
+│   ├── config.py            # API keys, model names, paths
+│   ├── rag_chain.py         # Core RAG chain + retriever logic (extracted from notebook)
+│   └── models.py            # Pydantic models for request/response
+├── data/                    # or vectorstore/
+│   └── chroma_db/           # persisted Chroma collection
+├── documents/               # SN_*.pdf files
+├── requirements.txt
+├── .env                     # TOGETHER_API_KEY or OPENAI_API_KEY
+└── virtual_insurance_agent.ipynb   # old reference / can be removed later
